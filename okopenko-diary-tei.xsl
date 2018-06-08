@@ -102,7 +102,7 @@
         <xsl:when test="starts-with($mode, 'page_')">
           <title><xsl:value-of select="//tei:titleStmt/tei:title"/></title>
           <rea><xsl:value-of select="//tei:pb[@n=$page+1]/preceding::node()[count(.|//tei:pb[@n=$page]/following::node()) = count(//tei:pb[@n=$page]/following::node())]/text()"/></rea>
-          <tra>Diplomatische Umschrift</tra>
+          <tra>ABC Diplomatische Umschrift</tra>
           <com>Kommentar</com>
           <img_url>https://fue.onb.ac.at/okopenko/+<xsl:value-of select="replace($img_url_page, '\\', '/')"/></img_url>
           <manifest>/iiif/+<xsl:value-of select="replace($img_url_page, '\\', '/')"/>/info.json</manifest>
